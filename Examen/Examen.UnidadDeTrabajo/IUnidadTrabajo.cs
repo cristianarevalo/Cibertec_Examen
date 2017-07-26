@@ -1,5 +1,6 @@
 ﻿using Examen.Modelos;
 using Examen.Repositorios;
+using Examen.Repositorios.Credito;
 
 namespace Examen.UnidadDeTrabajo
 {
@@ -7,5 +8,8 @@ namespace Examen.UnidadDeTrabajo
     {
         IRepositorio<Corporation> Corporations { get; }
         IRepositorio<Member> Members { get; }
+
+        IMiembroRepositorio Miembros { get; }
+        ICorporacionRepositorio Corporaciones { get; }
     }
 }

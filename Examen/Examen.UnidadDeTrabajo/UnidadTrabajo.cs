@@ -1,8 +1,7 @@
 ﻿using Examen.Modelos;
 using Examen.Repositorios;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Examen.Repositorios.Credito;
+using Examen.Repositorios.Credito.Dapper;
 
 namespace Examen.UnidadDeTrabajo
 {
@@ -13,9 +12,13 @@ namespace Examen.UnidadDeTrabajo
         {
             Corporations = new Repositorio<Corporation>(cadenaConexion);
             Members = new Repositorio<Member>(cadenaConexion);
+            Miembros = new MiembroRepositorio(cadenaConexion);
+            Corporaciones = new CorporacionRepositorio(cadenaConexion);
         }
                 
         public IRepositorio<Corporation> Corporations { get; private set; }
         public IRepositorio<Member> Members { get; private set; }
+        public IMiembroRepositorio Miembros { get; private set; }
+        public ICorporacionRepositorio Corporaciones { get; private set; }
     }
 }
