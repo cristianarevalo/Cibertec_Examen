@@ -2,6 +2,6 @@
 {
     public static class Configuration
     {
-        public static string ConnectionString = "Server=.\\SQLEXPRESS;Database=Credit;Trusted_Connection=True;MultipleActiveResultSets=true";
+        public static string ConnectionString = "Data Source=ASUS-CRISTIAN\\SERVER14;Initial Catalog=Credit;Persist Security Info=True;User ID=sa; Password=servc@j1216";
     }
 }

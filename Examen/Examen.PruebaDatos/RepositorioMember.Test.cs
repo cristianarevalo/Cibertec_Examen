@@ -14,7 +14,7 @@ namespace Examen.PruebaDatos
         [Fact(DisplayName ="[Member]Prueba Traer Todos")]
         public void Member_Prueba_TraerTodos()
         {
-            var result = _unidad.Members.ListarTodo().ToList();
+            var result = _unidad.Miembros.ListarTodo().ToList();
             Assert.True(result.Count>0);
         }
     }

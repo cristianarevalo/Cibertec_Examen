@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Examen.UnidadDeTrabajo;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Examen.WebApi.Controllers
 {

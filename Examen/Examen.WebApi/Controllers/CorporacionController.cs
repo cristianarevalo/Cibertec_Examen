@@ -14,25 +14,25 @@ namespace Examen.WebApi.Controllers
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(_unidad.Corporations.ListarTodo());
+            return Ok(_unidad.Corporaciones.ListarTodo());
         }
 
         [HttpPost]
         public IActionResult Crear([FromBody] Corporation corporacion)
         {
-            return Ok(_unidad.Corporations.Insertar(corporacion));
+            return Ok(_unidad.Corporaciones.Insertar(corporacion));
         }
 
         [HttpPut]
         public IActionResult Actualizar([FromBody] Corporation corporacion)
         {
-            return Ok(_unidad.Corporations.Actualizar(corporacion));
+            return Ok(_unidad.Corporaciones.Actualizar(corporacion));
         }
 
         [HttpDelete]
         public IActionResult Eliminar([FromBody] Corporation corporacion)
         {
-            return Ok(_unidad.Corporations.Eliminar(corporacion));
+            return Ok(_unidad.Corporaciones.Eliminar(corporacion));
         }
 
         [HttpGet]

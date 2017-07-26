@@ -4,6 +4,7 @@ using Examen.Modelos;
 
 namespace Examen.WebApi.Controllers
 {
+    [Route("miembro")]
     public class MiembroController : BaseController
     {
         public MiembroController(IUnidadTrabajo unidad): base(unidad)
@@ -13,25 +14,25 @@ namespace Examen.WebApi.Controllers
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(_unidad.Members.ListarTodo());
+            return Ok(_unidad.Miembros.ListarTodo());
         }
 
         [HttpPost]
         public IActionResult Crear([FromBody] Member miembro)
         {
-            return Ok(_unidad.Members.Insertar(miembro));
+            return Ok(_unidad.Miembros.Insertar(miembro));
         }
 
         [HttpPut]
         public IActionResult Actualizar([FromBody] Member miembro)
         {
-            return Ok(_unidad.Members.Actualizar(miembro));
+            return Ok(_unidad.Miembros.Actualizar(miembro));
         }
 
         [HttpDelete]
         public IActionResult Eliminar([FromBody] Member miembro)
         {
-            return Ok(_unidad.Members.Eliminar(miembro));
+            return Ok(_unidad.Miembros.Eliminar(miembro));
         }
 
         [HttpGet]

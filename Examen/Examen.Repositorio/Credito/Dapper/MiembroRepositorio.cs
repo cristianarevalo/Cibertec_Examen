@@ -16,12 +16,12 @@ namespace Examen.Repositorios.Credito.Dapper
         {
             using (var coneccion = new SqlConnection(_cadenaDeConexion))
             {
-                var parameters = new DynamicParameters();
-                parameters.Add("@filaInicio", filaInicio);
-                parameters.Add("@filaFin", filaFin);
+                var parametros = new DynamicParameters();
+                parametros.Add("@filaInicio", filaInicio);
+                parametros.Add("@filaFin", filaFin);
 
                 return coneccion.Query<Member>("dbo.MiembroListaPaginada",
-                        parameters,
+                        parametros,
                         commandType: System.Data.CommandType.StoredProcedure).AsList();
             }
         }
